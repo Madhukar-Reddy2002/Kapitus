@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fast business loans with flexible terms | Kapitus concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p900:#2a1139; --p800:#3C1B50; --p700:#502566; --p600:#642587; --accent:#AD00FF; --accent-ink:#7a00b3;
+  --lav:#F7F0FB; --bg:#ffffff; --surface:#ffffff; --surface2:#FAFAFB; --text:#1d1b22; --muted:#5d5866;
+  --border:#e3dde9; --chip-border:#cfc7d8; --ok:#0f7a55; --ok-bg:#e6f6ef; --amber:#8a5200; --amber-bg:#fff3de;
+  --note:#f2ff62; --shadow:0 18px 50px rgba(42,17,57,.22); --radius:20px; --gap:20px;
+  --head:68px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --lav:#241a2e; --bg:#141018; --surface:#1d1724; --surface2:#221a2b; --text:#f3eef7; --muted:#b9b0c4;
+    --border:#372c43; --chip-border:#4d3f5c; --ok:#5fd6a6; --ok-bg:#12352a; --amber:#ffc46b; --amber-bg:#3a2a0e;
+    --accent-ink:#d58bff; --shadow:0 18px 50px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --lav:#241a2e; --bg:#141018; --surface:#1d1724; --surface2:#221a2b; --text:#f3eef7; --muted:#b9b0c4;
+  --border:#372c43; --chip-border:#4d3f5c; --ok:#5fd6a6; --ok-bg:#12352a; --amber:#ffc46b; --amber-bg:#3a2a0e;
+  --accent-ink:#d58bff; --shadow:0 18px 50px rgba(0,0,0,.5);
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + var(--head) + 8px);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--p900)}
+img,svg{max-width:100%}
+a{color:inherit}
+button,textarea,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+[hidden]{display:none!important}
+section{padding:80px 0}
+.sec-head{margin-bottom:36px;max-width:640px}
+h2.title{font-size:clamp(28px,3.4vw,40px);line-height:1.12;letter-spacing:-.03em;font-weight:800;margin:0 0 12px}
+.lede2{color:var(--muted);font-size:18px;margin:0}
+
+/* header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--p900);color:#fff}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--head);gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.02em;text-decoration:none;color:#fff}
+.brand-mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--p600));display:grid;place-items:center}
+.header-right{display:flex;align-items:center;gap:20px}
+.phone{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:15px;color:#fff}
+.phone small{display:block;font-weight:500;opacity:.7;font-size:12px;line-height:1.1}
+.phone span{line-height:1.25}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font-weight:700;border-radius:12px;padding:13px 22px;text-decoration:none;font-size:16px;min-height:48px;transition:transform .15s,background .15s}
+.btn-white{background:#fff;color:var(--p800)}
+.btn-white:hover{background:#f1e6f8}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 22px rgba(173,0,255,.3)}
+.btn-primary:hover{background:#9700e0}
+.btn-primary:active{transform:translateY(1px)}
+.btn-ghost{background:transparent;color:var(--text);border:1.5px solid var(--chip-border)}
+.btn-sm{padding:9px 16px;min-height:40px;font-size:14px}
+.btn[disabled]{opacity:.45;cursor:not-allowed;box-shadow:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#502566 0%,#3C1B50 52%,#642587 100%);padding:0}
+.hero::before{content:"";position:absolute;width:760px;height:760px;right:-180px;top:-260px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(173,0,255,.55),rgba(173,0,255,0) 65%)}
+.hero::after{content:"";position:absolute;width:520px;height:520px;left:-220px;bottom:-300px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.10),rgba(255,255,255,0) 70%)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 480px;column-gap:64px;align-items:center;padding:64px 0 72px}
+.hero h1{font-size:clamp(36px,4.6vw,58px);line-height:1.05;letter-spacing:-.035em;font-weight:800;margin:0 0 18px;max-width:14ch}
+.lede{font-size:19px;max-width:44ch;margin:0 0 28px;color:rgba(255,255,255,.88)}
+.quals{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(255,255,255,.28);border-radius:16px;background:rgba(255,255,255,.08);backdrop-filter:blur(4px);max-width:500px}
+.quals-title{grid-column:1/-1;padding:14px 20px 0;font-weight:700;font-size:15px;color:rgba(255,255,255,.85)}
+.qual{padding:10px 20px 18px}
+.qual + .qual{border-left:1px solid rgba(255,255,255,.18)}
+.qual strong{display:block;font-size:28px;line-height:1.1;font-weight:800;letter-spacing:-.02em}
+.qual span{font-size:14px;color:rgba(255,255,255,.82)}
+.hero-link{display:inline-block;margin-top:16px;font-weight:600;color:#fff;text-underline-offset:4px}
+
+/* application card */
+.card{position:relative;background:var(--surface);color:var(--text);border-radius:22px;padding:32px;box-shadow:var(--shadow);width:100%}
+.card::before{content:"";position:absolute;inset:-12px -12px auto auto;width:100%;height:100%;border-radius:26px;border:1.5px solid rgba(255,255,255,.28);z-index:-1}
+.progress{height:6px;border-radius:99px;background:var(--border);overflow:hidden;margin-bottom:22px}
+.progress i{display:block;height:100%;width:6%;background:var(--accent);border-radius:99px;transition:width .35s}
+.card h2{font-size:26px;line-height:1.2;letter-spacing:-.02em;margin:0 0 6px;font-weight:800}
+.card .sub{margin:0 0 20px;color:var(--muted);font-size:15px}
+.field{position:relative}
+.field .cur{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-weight:800;font-size:24px;color:var(--muted)}
+.field input{width:100%;height:68px;border:1.5px solid var(--chip-border);border-radius:14px;background:var(--surface2);color:var(--text);font-weight:800;font-size:28px;line-height:1;padding:0 18px 0 42px;letter-spacing:-.02em}
+.field input:focus{border-color:var(--accent);outline:3px solid rgba(173,0,255,.25);outline-offset:0}
+.field[data-invalid="true"] input{border-color:#d4364c}
+.err{min-height:22px;margin:8px 2px 14px;color:#d4364c;font-size:14px;font-weight:600}
+.card .btn{width:100%}
+.range-note{margin:16px 0 0;padding:14px 16px;border-radius:12px;background:var(--lav);font-size:15px}
+.range-note b{font-weight:800}
+.chip{border:1.5px solid var(--chip-border);background:var(--surface2);border-radius:12px;padding:12px 14px;font-weight:600;font-size:16px;cursor:pointer;min-height:48px;text-align:left;transition:border-color .15s,background .15s}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{border-color:var(--accent);background:var(--lav);color:var(--accent-ink);font-weight:700;box-shadow:inset 0 0 0 1px var(--accent)}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 20px}
+.back{background:none;border:0;color:var(--muted);font-weight:600;cursor:pointer;padding:12px 4px;margin-top:4px;text-decoration:underline;text-underline-offset:4px;min-height:44px}
+.done{text-align:left}
+.tick{width:48px;height:48px;border-radius:50%;background:var(--ok-bg);color:var(--ok);display:grid;place-items:center;margin-bottom:14px}
+
+/* stats band (as on the live page) */
+.stats{padding:0;background:linear-gradient(135deg,#3C1B50,#2a1139);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{display:flex;align-items:center;justify-content:center;gap:16px;padding:30px 20px}
+.stat + .stat{border-left:1px solid rgba(255,255,255,.14)}
+.stat-ico{flex:0 0 48px;width:48px;height:48px;border-radius:14px;background:rgba(173,0,255,.28);display:grid;place-items:center;color:#fff}
+.stat strong{display:block;font-size:30px;line-height:1.1;font-weight:800;letter-spacing:-.02em}
+.stat span.l{font-size:15px;color:rgba(255,255,255,.78)}
+.stat .stars{color:var(--note);letter-spacing:1px;font-size:22px}
+
+/* why kapitus */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;border-radius:24px;overflow:hidden;border:1.5px solid var(--border);background:var(--surface)}
+.vis{position:relative;min-height:520px;background:linear-gradient(160deg,var(--p800),var(--p600));display:grid;place-items:center;padding:40px 24px;overflow:hidden}
+.vis::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(173,0,255,.55),rgba(173,0,255,0) 68%);right:-120px;top:-100px}
+.vis::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;border:1.5px solid rgba(255,255,255,.18);left:-90px;bottom:-90px}
+.phone-mock{position:relative;z-index:1;width:min(250px,64%);aspect-ratio:9/17;background:#fff;border-radius:34px;border:8px solid #1a0b24;box-shadow:0 30px 60px rgba(0,0,0,.35);padding:22px 16px 16px;color:#1d1b22;display:flex;flex-direction:column;gap:10px}
+.pm-bar{height:6px;border-radius:99px;background:#ece6f1;overflow:hidden}
+.pm-bar i{display:block;height:100%;width:58%;background:var(--accent);border-radius:99px}
+.pm-q{font-weight:800;font-size:15px;line-height:1.25;letter-spacing:-.01em;margin:8px 0 2px}
+.pm-opt{border:1.5px solid #cfc7d8;background:#fafafb;border-radius:10px;padding:9px 11px;font-size:13px;font-weight:600}
+.pm-opt.on{border-color:var(--accent);background:#F7F0FB;color:#7a00b3;box-shadow:inset 0 0 0 1px var(--accent)}
+.pm-btn{margin-top:auto;background:var(--accent);color:#fff;text-align:center;border-radius:10px;padding:10px;font-weight:700;font-size:13px}
+.float{position:absolute;z-index:2;background:#fff;color:#1d1b22;border-radius:16px;padding:12px 16px;box-shadow:0 14px 34px rgba(0,0,0,.28);font-weight:700;animation:bob 6s ease-in-out infinite}
+.float.f1{left:7%;top:10%}
+.float.f1 b{display:block;font-size:30px;line-height:1;letter-spacing:-.03em;color:var(--p700)}
+.float.f1 span{font-size:13px;font-weight:600;color:var(--muted)}
+.float.f2{right:6%;top:34%;animation-delay:-2s}
+.float.f2 b{display:block;font-size:22px;line-height:1.05;letter-spacing:-.02em;color:var(--p700)}
+.float.f2 span{font-size:13px;font-weight:600;color:var(--muted)}
+.float.f3{left:5%;bottom:9%;display:flex;gap:10px;align-items:center;max-width:250px;animation-delay:-4s}
+.float.f3 .av{flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--p600));color:#fff;display:grid;place-items:center}
+.float.f3 small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.float.f3 span{font-size:13px;line-height:1.3}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.why-list{display:flex;flex-direction:column}
+.why-item{flex:1;display:grid;grid-template-columns:48px 1fr;gap:18px;padding:30px 36px;align-items:center}
+.why-item + .why-item{border-top:1.5px solid var(--border)}
+.why-ico{width:48px;height:48px;border-radius:14px;background:var(--lav);color:var(--accent-ink);display:grid;place-items:center}
+.why-item h3{margin:0 0 6px;font-size:21px;letter-spacing:-.02em;line-height:1.2}
+.why-item p{margin:0;color:var(--muted)}
+.why-item blockquote{margin:14px 0 0;padding:12px 16px;border-left:4px solid var(--accent);background:var(--lav);border-radius:0 12px 12px 0;font-weight:600;font-size:15px}
+.why-item blockquote cite{display:block;font-style:normal;font-weight:500;font-size:13px;color:var(--muted);margin-top:4px}
+
+/* interactive fit check */
+.fit{background:var(--lav)}
+.fit-card{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;background:var(--surface);border:1.5px solid var(--border);border-radius:24px;padding:36px;box-shadow:0 10px 30px rgba(42,17,57,.10)}
+.ctl{margin-bottom:30px}
+.ctl:last-of-type{margin-bottom:24px}
+.ctl-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px}
+.ctl label,.ctl .lbl{font-weight:700;font-size:17px}
+.val{font-weight:800;font-size:18px;color:var(--accent-ink);white-space:nowrap}
+.val.idle{color:var(--muted);font-weight:600;font-size:15px}
+.range-wrap{position:relative;height:36px}
+.range-bar{position:absolute;left:0;right:0;top:14px;height:8px;border-radius:99px;background:var(--border)}
+.range-fill{position:absolute;left:0;top:14px;height:8px;border-radius:99px;background:var(--accent);width:calc(14px + (100% - 28px) * var(--p,0))}
+.range-wrap input{position:absolute;inset:0;width:100%;height:36px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer;touch-action:pan-y}
+.range-wrap input::-webkit-slider-runnable-track{height:36px;background:transparent}
+.range-wrap input::-moz-range-track{height:36px;background:transparent}
+.range-wrap input::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:4px;border-radius:50%;background:#fff;border:7px solid var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.range-wrap input::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:7px solid var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.ticks{display:flex;justify-content:space-between;margin-top:2px;font-size:13px;color:var(--muted);font-weight:600}
+.ticks span{flex:1;text-align:center}
+.ticks span:first-child{text-align:left}
+.ticks span:last-child{text-align:right}
+.rev-field{position:relative}
+.rev-field .cur{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-weight:800;font-size:20px;color:var(--muted)}
+.rev-field input{width:100%;height:60px;border:1.5px solid var(--chip-border);border-radius:14px;background:var(--surface2);color:var(--text);font-weight:800;font-size:22px;padding:0 16px 0 38px;letter-spacing:-.01em}
+.rev-field input:focus{border-color:var(--accent);outline:3px solid rgba(173,0,255,.25);outline-offset:0}
+.hint{margin:8px 2px 0;font-size:13px;color:var(--muted)}
+.cchips{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cchips .chip{text-align:center;padding:12px 8px;min-height:54px}
+.fit-result{align-self:start;border:1.5px solid var(--border);border-radius:18px;padding:26px;background:var(--surface2);transition:border-color .25s,background .25s}
+.fit-result[data-state="strong"]{border-color:var(--ok);background:linear-gradient(180deg,var(--ok-bg),var(--surface2) 70%)}
+.fit-result[data-state="likely"]{border-color:var(--accent)}
+.fit-result[data-state="review"]{border-color:#c88a1a;background:linear-gradient(180deg,var(--amber-bg),var(--surface2) 70%)}
+.fit-result[data-tone="ok"]:not([data-state="strong"]){border-color:var(--ok)}
+.seg{display:flex;gap:6px;margin-bottom:16px}
+.seg i{flex:1;height:7px;border-radius:99px;background:var(--border);transition:background .25s}
+.seg i.on{background:var(--accent)}
+.fit-result[data-state="strong"] .seg i.on{background:var(--ok)}
+.fit-result[data-state="review"] .seg i.on{background:#c88a1a}
+.fit-result h3{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:0 0 8px}
+.fit-result p{margin:0;color:var(--muted)}
+.fit-result .fine{font-size:13px;margin-top:14px}
+.fit-cta{margin-top:6px}
+.fit-cta .btn{width:100%}
+.fit-note{margin:18px 0 0;font-size:13px;color:var(--muted);max-width:70ch}
+
+/* reviews carousel */
+.rv-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.rv-head .sec-head{margin:0}
+.rv-rating{display:flex;align-items:center;gap:14px}
+.rv-rating b{font-size:46px;line-height:1;font-weight:800;letter-spacing:-.04em}
+.rv-rating small{display:block;font-size:14px;color:var(--muted);font-weight:600}
+.rv-rating .stars{color:#e0b400;letter-spacing:2px;font-size:18px;display:block}
+.car{position:relative}
+.car-track{display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 8px;-webkit-overflow-scrolling:touch}
+.car-track::-webkit-scrollbar{display:none}
+.rcard{flex:0 0 calc((100% - 2 * var(--gap)) / 3);scroll-snap-align:start;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:14px;min-height:240px}
+.rcard.alt{background:var(--p800);color:#fff;border-color:var(--p800)}
+.rcard .stars{color:#e0b400;letter-spacing:2px}
+.rcard.alt .stars{color:var(--note)}
+.rcard blockquote{margin:0;font-size:18px;line-height:1.45;font-weight:600;letter-spacing:-.01em;flex:1}
+.rcard .who{font-weight:700;font-size:15px}
+.rcard .src{font-size:13px;color:var(--muted)}
+.rcard.alt .src{color:rgba(255,255,255,.7)}
+.car-ctl{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px}
+.dots{display:flex;gap:8px;align-items:center}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;background:var(--chip-border);padding:0;cursor:pointer;transition:width .2s,background .2s;position:relative}
+.dots button::after{content:"";position:absolute;inset:-12px -4px}
+.dots button[aria-current="true"]{width:28px;border-radius:99px;background:var(--accent)}
+.car-btns{display:flex;gap:10px}
+.cbtn{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--chip-border);background:var(--surface);cursor:pointer;display:grid;place-items:center;color:var(--text);transition:background .15s,border-color .15s}
+.cbtn:hover{border-color:var(--accent);background:var(--lav)}
+
+/* ask + faq */
+.ask{background:var(--surface2)}
+.askbox{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px;max-width:900px}
+.askbox label{display:block;font-weight:700;margin-bottom:10px}
+.askrow{display:flex;gap:12px;align-items:stretch}
+.askrow textarea{flex:1;min-height:76px;resize:vertical;border:1.5px solid var(--chip-border);border-radius:12px;background:var(--surface2);padding:14px 16px;font-size:16px;line-height:1.4}
+.askrow textarea:focus{border-color:var(--accent);outline:3px solid rgba(173,0,255,.25);outline-offset:0}
+.askhint{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.answer:not(:empty){margin-top:18px}
+.a-card{border:1.5px solid var(--border);border-radius:16px;padding:22px;background:var(--surface2);animation:rise .25s ease-out}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.a-q{font-size:14px;color:var(--muted);margin:0 0 10px;font-weight:600}
+.a-body p{margin:0 0 12px}
+.a-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px;font-size:13px;color:var(--muted)}
+.pending{display:inline-block;padding:3px 10px;border-radius:99px;background:var(--amber-bg);color:var(--amber);font-weight:700;font-size:12px}
+.a-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.related{margin-top:18px;padding-top:14px;border-top:1px solid var(--border);font-size:14px}
+.related b{display:block;margin-bottom:6px;color:var(--muted);font-weight:600}
+.linkbtn{background:none;border:0;padding:6px 0;text-align:left;color:var(--accent-ink);font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px;display:block;min-height:36px}
+.cmp{list-style:none;margin:0 0 14px;padding:0}
+.cmp li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:15px}
+.cmp .tag{font-weight:700;font-size:13px;padding:3px 10px;border-radius:99px;white-space:nowrap}
+.cmp .meets{background:var(--ok-bg);color:var(--ok)}
+.cmp .below{background:var(--amber-bg);color:var(--amber)}
+
+.faqw{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;margin-top:44px;align-items:start}
+.faq-title{font-size:22px;letter-spacing:-.02em;font-weight:800;margin:0 0 14px}
+.tabs{display:flex;flex-direction:column;gap:6px}
+.tab{border:0;background:transparent;text-align:left;padding:13px 16px;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer;color:var(--muted);transition:background .15s,color .15s;min-height:48px}
+.tab:hover{background:var(--lav);color:var(--text)}
+.tab[aria-selected="true"]{background:var(--p800);color:#fff}
+.panel{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:6px 26px}
+.acc + .acc{border-top:1.5px solid var(--border)}
+.acc-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:0;cursor:pointer;text-align:left;padding:20px 0;font-weight:700;font-size:18px;letter-spacing:-.01em;min-height:60px}
+.acc-q svg{flex:0 0 22px;transition:transform .25s;color:var(--accent-ink)}
+.acc-q[aria-expanded="true"] svg{transform:rotate(45deg)}
+.acc-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease}
+.acc-a.open{grid-template-rows:1fr}
+.acc-a > div{overflow:hidden}
+.acc-a p{margin:0 0 12px;color:var(--muted);max-width:68ch}
+.acc-a .meta{margin:4px 0 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+
+/* final cta */
+.cta-band{background:linear-gradient(135deg,#502566 0%,#3C1B50 55%,#642587 100%);color:#fff;padding:64px 0}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.cta-band h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.03em;margin:0 0 6px;line-height:1.1}
+.cta-band p{margin:0;color:rgba(255,255,255,.85);font-size:18px}
+
+/* footer (modelled on the live page) */
+.foot{position:relative;background:linear-gradient(135deg,#502566 0%,#3C1B50 50%,#642587 100%);color:rgba(255,255,255,.8);padding:0}
+.foot-curve{display:block;width:100%;height:56px;background:transparent}
+.foot-curve svg{display:block;width:100%;height:100%}
+.foot-talk{text-align:center;padding:40px 0 36px;border-bottom:1px solid rgba(255,255,255,.16)}
+.foot-talk h3{margin:0 0 6px;font-size:28px;letter-spacing:-.02em;color:#fff}
+.foot-talk p{margin:0;font-size:17px}
+.foot-talk a{color:#fff;font-weight:700;text-underline-offset:4px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr 1.2fr;gap:36px;padding:44px 0 36px}
+.foot h4{margin:0 0 14px;color:#fff;font-size:17px;font-weight:700}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.foot li a{text-decoration:none;font-size:15px;color:rgba(255,255,255,.82)}
+.foot li a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.social{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.social a{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);display:grid;place-items:center;color:#fff;transition:background .15s}
+.social a:hover{background:rgba(255,255,255,.14)}
+.legal{border-top:1px solid rgba(255,255,255,.16);padding:24px 0 36px;font-size:13px;display:grid;gap:10px;color:rgba(255,255,255,.7)}
+.concept{padding:12px 14px;border-radius:10px;background:rgba(242,255,98,.12);border:1px solid rgba(242,255,98,.4);color:var(--note)}
+.totop{color:#fff;font-weight:600;font-size:14px;text-underline-offset:3px}
+
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--border);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:none;transform:translateY(110%);transition:transform .25s;box-shadow:0 -8px 24px rgba(0,0,0,.12)}
+.sticky-cta.show{transform:none}
+.sticky-cta .btn{width:100%}
+
+@media (max-width:1024px){
+  .rcard{flex-basis:calc((100% - var(--gap)) / 2)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:960px){
+  section{padding:56px 0}
+  .hero-grid{grid-template-columns:1fr;row-gap:34px;padding:36px 0 52px}
+  .card::before{display:none}
+  .why-grid{grid-template-columns:1fr}
+  .vis{min-height:420px}
+  .why-item{padding:26px 24px}
+  .fit-card{grid-template-columns:1fr;gap:22px;padding:22px 18px}
+  .fit-result{order:-1;position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--head) + 8px);z-index:6;padding:16px 18px;box-shadow:0 10px 24px rgba(42,17,57,.16);background:var(--surface)}
+  .fit-result[data-state="strong"]{background:var(--ok-bg)}
+  .fit-result[data-state="review"]{background:var(--amber-bg)}
+  .fit-result .seg{margin-bottom:10px}
+  .fit-result h3{font-size:18px;margin-bottom:4px}
+  .fit-result p{font-size:14px;line-height:1.4}
+  .fit-result .fine{display:none}
+  .faqw{grid-template-columns:1fr;gap:16px;margin-top:36px}
+  .tabs{flex-direction:row;overflow-x:auto;scrollbar-width:none;gap:8px;margin:0 -20px;padding:2px 20px 6px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:1.5px solid var(--chip-border);background:var(--surface);padding:10px 16px;white-space:nowrap}
+  .panel{padding:2px 18px}
+  .phone span{display:none}
+  .header-right .btn{display:none}
+  .sticky-cta{display:block}
+  body{padding-bottom:76px}
+  .cta-band{padding:48px 0}
+}
+@media (max-width:640px){
+  .rcard{flex-basis:86%;padding:24px}
+  .cchips{grid-template-columns:1fr 1fr}
+  .askrow{flex-direction:column}
+  .askrow .btn{width:100%}
+  .stat{flex-direction:column;gap:8px;padding:22px 6px;text-align:center}
+  .stat-ico{flex-basis:40px;width:40px;height:40px;border-radius:12px}
+  .stat strong{font-size:19px}
+  .stat span.l{font-size:13px;line-height:1.3;display:block}
+  .stat .stars{font-size:16px}
+  .car-btns{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:30px 20px}
+  .foot-grid > :first-child{grid-column:1/-1}
+}
+@media (max-width:520px){
+  .hero h1{max-width:none}
+  .lede{font-size:17px;margin-bottom:22px}
+  .qual{padding:8px 12px 14px}
+  .qual strong{font-size:22px}
+  .qual span{font-size:13px}
+  .quals-title{padding:12px 12px 0}
+  .card{padding:24px 20px}
+  .chips{grid-template-columns:1fr}
+  .float.f1 b{font-size:24px}
+  .float{padding:10px 12px}
+  .float.f3{max-width:210px}
+  .phone-mock{width:56%}
+  .acc-q{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kapitus concept home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 2v12M3 8l7-6M5.5 6.2 11 14" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      kapitus
+    </a>
+    <div class="header-right">
+      <a class="phone" href="tel:+18007807133" aria-label="Call customer service at (800) 780-7133">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span><small>Customer service</small>(800) 780-7133</span>
+      </a>
+      <a class="btn btn-white btn-sm" href="#apply" data-focus-amount>Apply now</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Fast business loans with flexible terms</h1>
+      <p class="lede">Tell us about your business and see your financing options. Funding can happen in as little as 24 hours after approval.</p>
+      <div class="quals" role="group" aria-label="Typical qualifications">
+        <div class="quals-title">Typical qualifications</div>
+        <div class="qual"><strong>2+ years</strong><span>in business</span></div>
+        <div class="qual"><strong>650+</strong><span>credit score</span></div>
+        <div class="qual"><strong>$250K+</strong><span>annual revenue</span></div>
+      </div>
+      <a class="hero-link" href="#fit">Not sure you match? Check your fit in 20 seconds</a>
+    </div>
+
+    <div id="apply">
+      <div class="card" id="card" aria-live="polite">
+        <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+
+        <div id="step1">
+          <h2>How much funding do you need?</h2>
+          <p class="sub">Enter an amount to start. You can change it anytime.</p>
+          <div class="field" id="amountField">
+            <span class="cur" aria-hidden="true">$</span>
+            <input id="amount" inputmode="numeric" autocomplete="off" value="100,000" aria-label="Funding amount in US dollars" aria-describedby="amountErr">
+          </div>
+          <div class="err" id="amountErr" role="alert"></div>
+          <button type="button" class="btn btn-primary" id="start">Get started</button>
+          <p class="range-note">We provide <b>$5K to $5M</b> in financing. The amount depends on your business profile.</p>
+        </div>
+
+        <div id="step2" hidden>
+          <h2>What will this funding help with?</h2>
+          <p class="sub">Select all that apply. This helps us match you to the right options.</p>
+          <div class="chips" id="uses" role="group" aria-label="Use of funds">
+            <button type="button" class="chip" aria-pressed="false">Cash flow</button>
+            <button type="button" class="chip" aria-pressed="false">Inventory</button>
+            <button type="button" class="chip" aria-pressed="false">Payroll</button>
+            <button type="button" class="chip" aria-pressed="false">Repairs or equipment</button>
+            <button type="button" class="chip" aria-pressed="false">Expansion or new hires</button>
+            <button type="button" class="chip" aria-pressed="false">Emergency</button>
+          </div>
+          <button type="button" class="btn btn-primary" id="next2" disabled>Continue</button>
+          <button type="button" class="back" id="back2">Change amount</button>
+        </div>
+
+        <div id="step3" class="done" hidden>
+          <div class="tick" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h2>You’re on your way</h2>
+          <p class="sub" id="summary"></p>
+          <p class="sub">This concept ends here. In the live build, the next screen asks about your industry, and each answer moves you forward automatically.</p>
+          <button type="button" class="btn btn-ghost" id="reset">Start over</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Kapitus at a glance">
+  <div class="wrap stats-grid">
+    <div class="stat">
+      <div class="stat-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.6c0-1 1-1.7 2.5-1.7s2.5.7 2.5 1.7-1 1.6-2.5 1.9-2.5.8-2.5 1.9 1 1.7 2.5 1.7 2.5-.7 2.5-1.7"/></svg></div>
+      <div><strong>$10 Billion</strong><span class="l">in capital provided</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3M9.5 20v-5h5v5"/></svg></div>
+      <div><strong>69,000</strong><span class="l">businesses funded</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
+      <div><strong>4.6</strong><span class="l">on Google, 881 reviews</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="title">Experience, range and people who pick up the phone</h2>
+      <p class="lede2">What owners tell us they value most about working with Kapitus.</p>
+    </div>
+    <div class="why-grid">
+      <div class="vis" role="img" aria-label="Illustration of the mobile application with a financing specialist on hand">
+        <div class="float f1"><b>20+ years</b><span>financing small businesses</span></div>
+        <div class="phone-mock" aria-hidden="true">
+          <div class="pm-bar"><i></i></div>
+          <div class="pm-q">What industry is your business in?</div>
+          <div class="pm-opt">Construction</div>
+          <div class="pm-opt on">Health Care</div>
+          <div class="pm-opt">Transportation</div>
+          <div class="pm-btn">Continue</div>
+        </div>
+        <div class="float f2"><b>Up to $5M</b><span>in financing</span></div>
+        <div class="float f3">
+          <div class="av" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2zM3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"/></svg></div>
+          <div><small>Your financing specialist</small><span>I’ll walk you through your options.</span></div>
+        </div>
+      </div>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.5-3.2 8.3-8 9-4.8-.7-8-4.5-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+          <div><h3>20+ years of experience</h3><p>We’ve been financing small businesses since 2006, with $10 billion provided to 69,000 businesses.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="why-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.6c0-1 1-1.7 2.5-1.7s2.5.7 2.5 1.7-1 1.6-2.5 1.9-2.5.8-2.5 1.9 1 1.7 2.5 1.7 2.5-.7 2.5-1.7"/></svg></div>
+          <div><h3>Funding from $5K up to $5M</h3><p>From a small cash-flow gap to a major expansion. The amount depends on your business profile.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="why-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+          <div>
+            <h3>A specialist who’s in your corner</h3>
+            <p>You’re never left alone with a form. A financing specialist walks you through your options.</p>
+            <blockquote>“You truly feel like you have a teammate that cares about your business.”<cite>Kyle Flowers, Google review</cite></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fit" id="fit">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="title">See how your business lines up</h2>
+      <p class="lede2">Play with the three inputs below. The result updates as you go. No personal details needed.</p>
+    </div>
+    <div class="fit-card">
+      <div class="controls">
+        <div class="ctl">
+          <div class="ctl-top"><span class="lbl" id="tLbl">How long have you been in business?</span><span class="val idle" id="tVal">Move the slider</span></div>
+          <div class="range-wrap" id="tWrap" style="--p:0">
+            <div class="range-bar"></div><div class="range-fill"></div>
+            <input type="range" id="tRange" min="0" max="4" step="1" value="0" aria-labelledby="tLbl" aria-valuetext="Not set">
+          </div>
+          <div class="ticks" aria-hidden="true"><span>6 mo</span><span>1 yr</span><span>1.5 yrs</span><span>2 yrs</span><span>2+ yrs</span></div>
+        </div>
+
+        <div class="ctl">
+          <div class="ctl-top"><label for="revIn">What’s your annual revenue?</label><span class="val idle" id="rVal">Enter an amount</span></div>
+          <div class="rev-field"><span class="cur" aria-hidden="true">$</span><input id="revIn" inputmode="numeric" autocomplete="off" placeholder="350,000"></div>
+          <p class="hint">An approximate number is fine.</p>
+        </div>
+
+        <div class="ctl">
+          <div class="ctl-top"><span class="lbl" id="cLbl">What’s your approximate credit score?</span></div>
+          <div class="cchips" id="cChips" role="group" aria-labelledby="cLbl">
+            <button type="button" class="chip" data-v="0" aria-pressed="false">Below 600</button>
+            <button type="button" class="chip" data-v="1" aria-pressed="false">600 to 649</button>
+            <button type="button" class="chip" data-v="2" aria-pressed="false">650 to 699</button>
+            <button type="button" class="chip" data-v="3" aria-pressed="false">700 or higher</button>
+          </div>
+        </div>
+
+        <div class="fit-cta"><button type="button" class="btn btn-primary" data-focus-amount>Start my application</button></div>
+      </div>
+
+      <div class="fit-result" id="fitResult" data-state="idle" data-tone="neutral" role="status" aria-live="polite">
+        <div class="seg" aria-hidden="true"><i></i><i></i><i></i></div>
+        <h3 id="fTitle">Let’s see where you stand</h3>
+        <p id="fBody">Move the slider, enter your revenue and pick a credit range. We’ll update as you go.</p>
+        <p class="fine src">This isn’t an offer or a credit decision.</p>
+      </div>
+    </div>
+    <p class="fit-note">Concept note: the thresholds behind these messages are illustrative placeholders. Kapitus needs to confirm the real rules, and compliance should approve the wording before launch.</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="rv-head">
+      <div class="sec-head"><h2 class="title" style="margin-bottom:0">The proof is in the ratings</h2></div>
+      <div class="rv-rating"><b>4.6</b><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small>out of 5 on Google, based on 881 reviews</small></div></div>
+    </div>
+    <div class="car" id="car" role="region" aria-roledescription="carousel" aria-label="Customer reviews">
+      <div class="car-track" id="carTrack" tabindex="0"></div>
+      <div class="car-ctl">
+        <div class="dots" id="dots"></div>
+        <div class="car-btns">
+          <button type="button" class="cbtn" id="carPause" aria-pressed="false" aria-label="Pause automatic scrolling"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" id="pauseIco"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+          <button type="button" class="cbtn" id="carPrev" aria-label="Previous reviews"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="cbtn" id="carNext" aria-label="Next reviews"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ask" id="ask">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="title">Questions? Ask away</h2>
+      <p class="lede2">Describe your situation in your own words, such as how long you’ve been in business and your revenue. Answers come only from Kapitus information.</p>
+    </div>
+    <div class="askbox">
+      <form id="askForm" novalidate>
+        <label for="askInput">Your question</label>
+        <div class="askrow">
+          <textarea id="askInput" rows="3" maxlength="400" placeholder="Example: I have 1.6 years in business and $400K in revenue. Can I still apply?"></textarea>
+          <button type="submit" class="btn btn-primary">Ask</button>
+        </div>
+        <p class="askhint">Please don’t include personal details such as your SSN. For anything we can’t answer here, a specialist is a call away.</p>
+      </form>
+      <div class="answer" id="answer" aria-live="polite"></div>
+    </div>
+
+    <div class="faqw">
+      <div>
+        <h3 class="faq-title">Common questions</h3>
+        <div class="tabs" id="tabs" role="tablist" aria-label="Question topics"></div>
+      </div>
+      <div class="panel" id="panel" role="tabpanel"></div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="foot" id="fFoot">
+  <div class="foot-curve" aria-hidden="true"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><path fill="currentColor" d="M0 0h1000v1C1000 19.400 873.300 97.800 500 97 126.700 96.300 .800 19.800 0 0z" style="color:var(--surface2)"/></svg></div>
+  <div class="wrap">
+    <div class="foot-talk">
+      <h3>Have questions? Let’s talk.</h3>
+      <p>Connect with one of our financing specialists at <a href="tel:+16466307618">(646) 630-7618</a>.</p>
+      <p style="margin-top:18px"><a class="btn btn-white" href="#apply" data-focus-amount style="color:var(--p800);text-decoration:none">Get started</a></p>
+    </div>
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="font-size:24px">
+          <span class="brand-mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 2v12M3 8l7-6M5.5 6.2 11 14" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>kapitus
+        </a>
+        <p style="margin:14px 0 0;font-size:15px;max-width:30ch">Providing the best financing solutions for small businesses since 2006.</p>
+        <div class="social">
+          <a href="https://twitter.com/KapitusFinance" target="_blank" rel="noopener" aria-label="Kapitus on X"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="https://www.linkedin.com/company/kapitus/" target="_blank" rel="noopener" aria-label="Kapitus on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="9" width="4" height="12" rx="1"/><circle cx="5" cy="5" r="2.2"/><path d="M10 9h3.6v1.7c.6-1.1 1.9-2 3.7-2 3.100 0 3.700 2 3.700 4.700V21h-4v-6.400c0-1.300-.1-2.400-1.600-2.400s-1.800 1.100-1.800 2.400V21h-4z"/></svg></a>
+          <a href="https://www.facebook.com/KapitusFinance/" target="_blank" rel="noopener" aria-label="Kapitus on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.300c0-.8.200-1.300 1.400-1.300H17V2.200C16.600 2.100 15.600 2 14.500 2 12.100 2 10.500 3.400 10.500 6V8H8v3.300h2.500V22H14V11.300h2.700L17 8z"/></svg></a>
+          <a href="https://www.youtube.com/channel/UCvZ5ahnMH9jCnN0lP4rRROA" target="_blank" rel="noopener" aria-label="Kapitus on YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.600 7.200a2.500 2.500 0 0 0-1.800-1.800C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.500 2.500 0 0 0 2.400 7.200C2 8.800 2 12 2 12s0 3.200.4 4.800a2.500 2.500 0 0 0 1.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 0 0 1.800-1.800c.4-1.600.4-4.800.4-4.800s0-3.200-.4-4.800zM10 15V9l5.200 3z"/></svg></a>
+          <a href="https://www.instagram.com/kapitus_financing/" target="_blank" rel="noopener" aria-label="Kapitus on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.300" cy="6.700" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="https://kapitus.com/" target="_blank" rel="noopener">Home</a></li>
+          <li><a href="https://kapitus.com/the-kapitus-difference" target="_blank" rel="noopener">Kapitus Difference</a></li>
+          <li><a href="https://kapitus.com/blog" target="_blank" rel="noopener">Resource Center</a></li>
+          <li><a href="https://kapitus.com/success-stories" target="_blank" rel="noopener">Success Stories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="https://kapitus.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://kapitus.com/terms-of-use" target="_blank" rel="noopener">Terms of Use Agreement</a></li>
+          <li><a href="https://kapitus.com/media-center/leadership" target="_blank" rel="noopener">Leadership Team</a></li>
+          <li><a href="https://kapitus.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          <li><a href="https://kapitus.com/media-center" target="_blank" rel="noopener">Media Center</a></li>
+          <li><a href="https://kapitus.com/developer-documentation" target="_blank" rel="noopener">Kapitus Partner API</a></li>
+          <li><a href="https://kapitus.com/usa-patriot-act" target="_blank" rel="noopener">USA PATRIOT Act</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="https://kapitus.com/products-services/business-loans/" target="_blank" rel="noopener">Business Loans</a></li>
+          <li><a href="https://kapitus.com/products-services/sba-loans/" target="_blank" rel="noopener">SBA Loans</a></li>
+          <li><a href="https://kapitus.com/products-services/line-of-credit/" target="_blank" rel="noopener">Line of Credit</a></li>
+          <li><a href="https://kapitus.com/products-services/equipment-financing/" target="_blank" rel="noopener">Equipment Financing</a></li>
+          <li><a href="https://kapitus.com/products-services/revenue-based-financing/" target="_blank" rel="noopener">Revenue Based Financing</a></li>
+          <li><a href="https://kapitus.com/products-services/invoice-factoring/" target="_blank" rel="noopener">Invoice Factoring</a></li>
+          <li><a href="https://kapitus.com/products-services/purchase-order-financing/" target="_blank" rel="noopener">Purchase Order Financing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <div>Copyright 2026 Strategic Funding Source, Inc. All rights reserved. Kapitus and the Kapitus logo are registered trademarks of Strategic Funding Source, Inc. Loans made or brokered in California are either by Kapitus LLC, pursuant to License Number 60DBO-198798, or by Kapitus Equipment Finance LLC, pursuant to License Number 60DBO-210433.</div>
+      <div>Loans may be funded by WebBank. The specific lender will be identified in your agreement.</div>
+      <div class="concept">Concept mockup for discussion. Figures, claims and eligibility wording come from Kapitus pages or are placeholders, and need Kapitus and compliance sign-off before use.</div>
+      <div><a class="totop" href="#top">Back to top</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky"><a class="btn btn-primary" href="#apply" data-focus-amount>Get started</a></div>
+
+<script>
+/*ENGINE*/
+var TYPICAL = {years:2, revenue:250000, credit:650};
+var PHONE_SALES = "(646) 630-7618", PHONE_CS = "(800) 780-7133";
+
+/* Knowledge base. Each answer is written only from Kapitus pages or the application itself.
+   status "pending" = needs Kapitus confirmation before launch. */
+var CATS = ["Qualifying","Funding and speed","Applying","Credit and cost","About Kapitus"];
+var KB = [
+ {id:"qualify", cat:"Qualifying", q:"What do I need to qualify?",
+  a:["Our typical qualifications are 2+ years in business, a 650+ credit score and $250K+ in annual revenue.","A financing specialist can tell you where you stand."],
+  src:"Kapitus landing page", kw:"qualify qualification requirement eligible eligibility need minimum criteria", rx:/(what (do|does) i need|qualif|eligib|requirement|criteria)/},
+ {id:"credit", cat:"Qualifying", q:"What credit score do I need?",
+  a:["The typical qualification is a 650+ credit score. Kapitus’s published minimum for small business loans is 625.","A specialist can confirm what applies to your situation."],
+  src:"Kapitus.com FAQ", status:"pending", kw:"credit score fico minimum", rx:/(credit score|fico|minimum score|bad credit|low credit)/},
+ {id:"time", cat:"Qualifying", q:"How long do I need to be in business?",
+  a:["Two or more years in business is typical.","It’s one of three typical qualifications, along with credit score and revenue. If you have less, a specialist is the best person to tell you how your overall picture looks."],
+  src:"Kapitus landing page", kw:"business years year long time established startup new", rx:/(how long.*(business|operat)|time in business|years in business|new business|start-?up)/},
+ {id:"revenue", cat:"Qualifying", q:"How much revenue do I need?",
+  a:["$250K+ in annual revenue is typical. In the application you’ll choose your annual revenue range."],
+  src:"Kapitus landing page", kw:"revenue sales income annual minimum", rx:/(how much revenue|minimum revenue|annual revenue|sales)/},
+ {id:"coowner", cat:"Qualifying", q:"What if I own less than 50% of the business?",
+  a:["If your ownership is under 50%, we’ll ask for co-owner details to assess eligibility."],
+  src:"Kapitus application", kw:"own ownership percent partner coowner co-owner partners owners", rx:/(own(ership)?|partner|co-?owner|percent|%)/},
+ {id:"amount", cat:"Funding and speed", q:"How much funding can I get?",
+  a:["We provide $5K to $5M in financing. The amount you’re offered depends on your business profile, so not every business qualifies for the full range."],
+  src:"Kapitus application and business loans page", status:"pending", kw:"amount much funding borrow maximum max loan largest biggest smallest", rx:/(how much (can|could|will).*(get|borrow|fund|loan|approv)|maximum|max loan|loan amount|borrow)/},
+ {id:"speed", cat:"Funding and speed", q:"How fast can I get funded?",
+  a:["Some decisions come in as little as 4 hours, and funding can happen in as little as 24 hours after approval.","Timing depends on how quickly we receive your full application package."],
+  src:"Kapitus site", kw:"fast quick speed days hours funded funding approval decision time when", rx:/(how (fast|quick|soon)|how long.*(fund|approv|get (the )?money)|decision|turnaround|same day|24 hours)/},
+ {id:"terms", cat:"Funding and speed", q:"What are the repayment terms?",
+  a:["Business loan terms run from 6 to 24 months, with daily, weekly or monthly payment options."],
+  src:"Kapitus business loans page", kw:"term terms repayment repay payment payments monthly weekly daily months", rx:/(repay|payment|terms?\b|how long (to|do i) pay)/},
+ {id:"use", cat:"Funding and speed", q:"What can I use the funds for?",
+  a:["There’s no limit on how you use business loan funds: payroll, inventory, equipment, expansion, repairs and more."],
+  src:"Kapitus.com FAQ", kw:"use funds spend payroll inventory equipment expansion purpose allowed", rx:/(use (the )?(funds|money|loan)|spend|what can i|allowed to)/},
+ {id:"offers", cat:"Funding and speed", q:"Do I get more than one offer?",
+  a:["Yes. One application lets you apply for multiple offers."],
+  src:"Kapitus.com", kw:"offer offers multiple compare options several", rx:/(multiple|more than one|several|compare).*(offer|option)|offers?/},
+ {id:"products", cat:"Funding and speed", q:"What other financing do you offer?",
+  a:["Business loans, SBA loans, lines of credit, equipment financing, Helix healthcare financing, revenue-based financing, invoice factoring and purchase order financing.","SBA loans, lines of credit, invoice factoring and purchase order financing are offered through members of Kapitus’s financing network, not by Kapitus directly."],
+  src:"Kapitus site", kw:"product products sba line credit equipment factoring invoice purchase order revenue-based healthcare other types", rx:/(sba|line of credit|equipment|factoring|invoice|purchase order|other (products|types|financing))/},
+ {id:"howlong", cat:"Applying", q:"How long does the application take?",
+  a:["About 5 minutes. You answer one question at a time and can go back at any step."],
+  src:"Concept estimate", status:"pending", kw:"application minutes take apply long process steps", rx:/(how long.*(appl|take)|how many (steps|questions)|minutes)/},
+ {id:"docs", cat:"Applying", q:"Which documents do I need?",
+  a:["Your 3 most recent, complete business bank statements. If your business is in California or New York, you’ll upload 4."],
+  src:"Kapitus application", kw:"document documents bank statement statements upload paperwork papers need", rx:/(document|bank statement|statements|paperwork|upload)/},
+ {id:"later", cat:"Applying", q:"Can I apply without my bank statements handy?",
+  a:["Yes. You can submit your application first, and we’ll email you a secure link to upload your statements later."],
+  src:"Concept feature", status:"pending", kw:"later handy statements skip without proceed submit email link", rx:/(don.?t have.*(statement|document)|without.*(statement|document)|upload.*later|later)/},
+ {id:"ssn", cat:"Applying", q:"Is my Social Security number safe?",
+  a:["Your SSN is encrypted and securely protected."],
+  src:"Kapitus application", kw:"ssn social security number safe secure privacy protected encrypted", rx:/(ssn|social security|secure|safe|privacy|encrypt)/},
+ {id:"creditpull", cat:"Credit and cost", q:"Will applying affect my credit score?",
+  a:["Kapitus’s request for your credit report doesn’t affect your personal credit score.","If your application is shared with other lenders, they may run their own checks, which can include hard credit pulls. This is explained in the application terms."],
+  src:"Kapitus application terms", kw:"credit pull inquiry hard soft affect hurt impact check report", rx:/(hard (pull|inquiry|check)|soft (pull|inquiry|check)|(affect|hurt|impact|ding).*credit|credit (check|pull|inquiry))/},
+ {id:"price", cat:"Credit and cost", q:"What will it cost?",
+  a:["Our loans don’t technically carry an interest rate. We charge one fixed price that doesn’t change.","Pricing depends on your credit score, revenue, industry and the loan term you choose. A specialist will walk you through the numbers."],
+  src:"Kapitus.com FAQ", kw:"cost price rate interest apr fee fees expensive pricing percent", rx:/(interest|apr|\brates?\b|cost|fees?\b|price|pricing|expensive|how much (does|will) it)/},
+ {id:"person", cat:"About Kapitus", q:"Can I talk to a person?",
+  a:["Yes. Financing specialists are at "+PHONE_SALES+". Customer service is at "+PHONE_CS+"."],
+  src:"Kapitus site", kw:"talk speak call person human phone specialist representative contact agent help", rx:/(talk|speak|call|phone|human|person|representative|specialist|contact)/},
+ {id:"about", cat:"About Kapitus", q:"How long has Kapitus been around?",
+  a:["Kapitus has been financing small businesses since 2006. We’ve provided $10 billion in capital to 69,000 businesses and hold a 4.6 rating on Google from 881 reviews."],
+  src:"Kapitus landing page", kw:"kapitus legit trust reputable founded since experience company about reviews", rx:/(legit|trust|reputable|scam|since|founded|experience|how old|reviews)/}
+];
+
+var STOP = new Set("the and for you your can are but not with have has had this that from what when how will would could should about any get got does did its into our out all one who why where than then them they there their been being was were just only also very more most some such like want need".split(" "));
+function stem(w){ return w.length>4 && /s$/.test(w) && !/ss$/.test(w) ? w.slice(0,-1) : w; }
+function tokens(s){
+  return String(s).toLowerCase().replace(/[^a-z0-9\s-]/g," ").split(/\s+/).filter(function(w){return w.length>2 && !STOP.has(w)}).map(stem);
+}
+KB.forEach(function(e){ e.kwSet = new Set(tokens(e.kw)); });
+
+function retrieve(q){
+  var tk = tokens(q), low = q.toLowerCase();
+  var scored = KB.map(function(e){
+    var s = 0;
+    tk.forEach(function(t){ if(e.kwSet.has(t)) s += 2; });
+    if(e.rx && e.rx.test(low)) s += 4;
+    return {e:e, s:s};
+  }).sort(function(a,b){return b.s-a.s});
+  return scored;
+}
+
+/* Parse numbers a person types about their own business. */
+var WORDNUM = {one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10};
+function parseProfile(raw){
+  var text = " " + raw.toLowerCase().replace(/\bone and a half\b/g,"1.5").replace(/\ba year and a half\b/g,"1.5") + " ";
+  text = text.replace(/\b(one|two|three|four|five|six|seven|eight|nine|ten)\s+(years?|yrs?|months?)\b/g,function(m,w,u){return WORDNUM[w]+" "+u});
+  text = text.replace(/\b(for|in business|about|almost|over|nearly)\s+a\s+year\b/g,function(m,w){return w+" 1 year"});
+  var out = {};
+  var m;
+  if((m = text.match(/(?:credit|fico|score)[^0-9]{0,25}(\d{3})\b/)) || (m = text.match(/\b(\d{3})\s*(?:credit|fico|score)/))){
+    var c = parseInt(m[1],10);
+    if(c>=300 && c<=850){ out.credit = c; text = text.replace(m[0]," "); }
+  }
+  if((m = text.match(/(\d+(?:\.\d+)?)\s*(?:years?|yrs?)\b/))){
+    out.years = parseFloat(m[1]); out.yearsLabel = m[1] + (parseFloat(m[1])===1 ? " year" : " years");
+    text = text.replace(m[0]," ");
+    var mm = text.match(/(\d+)\s*months?\b/);
+    if(mm){ out.years += parseInt(mm[1],10)/12; text = text.replace(mm[0]," "); }
+  } else if((m = text.match(/(\d+)\s*months?\b/))){
+    var mo = parseInt(m[1],10);
+    out.years = mo/12; out.yearsLabel = mo + (mo===1 ? " month" : " months");
+    text = text.replace(m[0]," ");
+  } else if(/(less than|under|not even|just under)\s+(a\s+|1\s+)?year|just started|recently started|brand new/.test(text)){
+    out.years = 0.5; out.yearsLabel = "under 1 year";
+  }
+  var re = /(\$)?\s?(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)\s*(k|m|mm|thousand|million)?\b/g, cand;
+  while((cand = re.exec(text))){
+    var val = parseFloat(cand[2].replace(/,/g,""));
+    var suf = cand[3];
+    if(suf==="k"||suf==="thousand") val*=1e3;
+    else if(suf==="m"||suf==="mm"||suf==="million") val*=1e6;
+    if(!(cand[1] || suf || val>=10000)) continue;
+    var end = cand.index + cand[0].length;
+    var before = text.slice(Math.max(0,cand.index-30), cand.index);
+    var after = text.slice(end, end+20);
+    var revRx = /(revenue|sales|income|earn\w*|making|make|turnover|gross|annual|per year|a year)/g;
+    var amtRx = /(need|loan|fund\w*|borrow\w*|looking for|amount|request\w*)/g;
+    var last = function(rx, str){ var m2, pos = -1; rx.lastIndex = 0; while((m2 = rx.exec(str))){ pos = m2.index; } return pos; };
+    var first = function(rx, str){ rx.lastIndex = 0; var m3 = rx.exec(str); return m3 ? m3.index : -1; };
+    var rb = last(revRx, before), ab = last(amtRx, before), label = null;
+    if(rb>=0 || ab>=0){ label = rb > ab ? "rev" : "amt"; }
+    else {
+      var ra = first(revRx, after), aa = first(amtRx, after);
+      if(ra>=0 && (aa<0 || ra<aa)) label = "rev"; else if(aa>=0) label = "amt";
+    }
+    if(label==="rev" && out.revenue==null){
+      var monthly = /(per month|a month|monthly|\/mo\b|each month|every month)/.test(after + " " + before.slice(-12));
+      out.revenue = monthly ? val*12 : val; out.monthly = monthly;
+    } else if(label==="amt" && out.amount==null){
+      out.amount = val;
+    } else if(label===null && out.revenue==null){
+      out.revenue = val;
+    }
+  }
+  return out;
+}
+function money(n){
+  if(n>=1e6) return "$" + (Math.round(n/1e5)/10) + "M";
+  if(n>=1e3) return "$" + Math.round(n/1e3) + "K";
+  return "$" + Math.round(n);
+}
+function profileAnswer(p){
+  var rows = [], short = [], known = 0;
+  if(p.years!=null){ known++;
+    var ok = p.years >= TYPICAL.years;
+    rows.push({label:"Time in business", val:p.yearsLabel, typical:"2+ years", ok:ok}); if(!ok) short.push("time in business"); }
+  if(p.revenue!=null){ known++;
+    var ok2 = p.revenue >= TYPICAL.revenue;
+    rows.push({label:"Annual revenue", val:money(p.revenue) + (p.monthly ? " (from monthly)" : ""), typical:"$250K+", ok:ok2}); if(!ok2) short.push("annual revenue"); }
+  if(p.credit!=null){ known++;
+    var ok3 = p.credit >= TYPICAL.credit;
+    rows.push({label:"Credit score", val:String(p.credit), typical:"650+", ok:ok3}); if(!ok3) short.push("credit score"); }
+  var paras = [];
+  if(short.length===0){
+    paras.push("On the points you shared, you line up with our typical qualifications. Start an application and a specialist will take it from there.");
+  } else {
+    paras.push("You’re under the typical range on " + short.join(" and ") + ". Typical qualifications aren’t the whole picture, so a specialist is the right person to look at your full profile, and you can apply to find out where you stand.");
+  }
+  var missing = [];
+  if(p.years==null) missing.push("time in business");
+  if(p.revenue==null) missing.push("annual revenue");
+  if(p.credit==null) missing.push("credit score");
+  if(missing.length) paras.push("Add your " + missing.join(" and ") + " and I’ll compare those too.");
+  if(p.credit!=null && p.credit>=625 && p.credit<650) paras.push("Kapitus’s published minimum credit score for small business loans is 625.");
+  return {rows:rows, paras:paras, src:"Kapitus landing page qualifications", status:"pending", known:known};
+}
+/*END ENGINE*/
+</script>
+
+<script>
+(function(){
+  var $ = function(s,r){return (r||document).querySelector(s)};
+  var $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function digits(v){return (v||"").replace(/[^0-9]/g,"")}
+  function fmt(n){return n ? Number(n).toLocaleString("en-US") : ""}
+  function el(tag, cls, txt){ var n = document.createElement(tag); if(cls) n.className = cls; if(txt!=null) n.textContent = txt; return n; }
+
+  /* ---------- hero card ---------- */
+  var amount = $("#amount"), field = $("#amountField"), err = $("#amountErr");
+  amount.addEventListener("input", function(){
+    amount.value = fmt(digits(amount.value));
+    field.dataset.invalid = "false"; err.textContent = "";
+  });
+  amount.addEventListener("focus", function(){ setTimeout(function(){amount.select()},0) });
+  var bar = $("#bar"), s1=$("#step1"), s2=$("#step2"), s3=$("#step3");
+  function show(elm, pct){ [s1,s2,s3].forEach(function(x){x.hidden = (x!==elm)}); bar.style.width = pct + "%"; }
+  $("#start").addEventListener("click", function(){
+    var n = Number(digits(amount.value));
+    if(!n || n < 5000 || n > 5000000){
+      field.dataset.invalid = "true";
+      err.textContent = "Enter an amount between $5,000 and $5,000,000.";
+      amount.focus(); return;
+    }
+    show(s2, 12);
+  });
+  amount.addEventListener("keydown", function(e){ if(e.key==="Enter"){ $("#start").click(); }});
+  var uses = $$("#uses .chip"), next2 = $("#next2");
+  uses.forEach(function(c){
+    c.addEventListener("click", function(){
+      c.setAttribute("aria-pressed", String(c.getAttribute("aria-pressed")!=="true"));
+      next2.disabled = !uses.some(function(x){return x.getAttribute("aria-pressed")==="true"});
+    });
+  });
+  $("#back2").addEventListener("click", function(){ show(s1, 6); amount.focus(); });
+  next2.addEventListener("click", function(){
+    var picked = uses.filter(function(x){return x.getAttribute("aria-pressed")==="true"}).map(function(x){return x.textContent.toLowerCase()});
+    $("#summary").textContent = "$" + amount.value + " for " + picked.join(", ") + ".";
+    show(s3, 20);
+  });
+  $("#reset").addEventListener("click", function(){
+    uses.forEach(function(x){x.setAttribute("aria-pressed","false")});
+    next2.disabled = true; show(s1, 6);
+  });
+  function toAmount(e){
+    if(e){ e.preventDefault(); }
+    $("#card").scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"center"});
+    setTimeout(function(){ if(!s1.hidden){ amount.focus({preventScroll:true}); } }, reduce ? 0 : 450);
+  }
+  $$("[data-focus-amount]").forEach(function(a){ a.addEventListener("click", toAmount); });
+
+  /* ---------- live fit check (illustrative rules) ---------- */
+  var TIME = [
+    {label:"6 months",  key:"lt1"},
+    {label:"1 year",    key:"1to2"},
+    {label:"1.5 years", key:"1to2"},
+    {label:"2 years",   key:"2plus"},
+    {label:"2+ years",  key:"2plus"}
+  ];
+  var fit = {t:null, rev:null, c:null};
+  var tRange=$("#tRange"), tWrap=$("#tWrap"), tVal=$("#tVal"), revIn=$("#revIn"), rVal=$("#rVal"), cChips=$$("#cChips .chip");
+  var res=$("#fitResult"), segs=$$(".seg i", res), fTitle=$("#fTitle"), fBody=$("#fBody");
+  function revBand(n){ return n<100000?0 : n<250000?1 : n<500000?2 : n<1000000?3 : 4; }
+  function setRes(state, tone, title, body){
+    res.dataset.state = state; res.dataset.tone = tone; fTitle.textContent = title; fBody.textContent = body;
+  }
+  function updateFit(){
+    var hasT = fit.t!==null, hasR = fit.rev!==null && fit.rev>0, hasC = fit.c!==null;
+    var n = (hasT?1:0) + (hasR?1:0) + (hasC?1:0);
+    segs.forEach(function(s,i){ s.classList.toggle("on", i<n); });
+    var t = hasT ? TIME[fit.t].key : null, r = hasR ? revBand(fit.rev) : null, c = hasC ? fit.c : null;
+    if(n===0){ setRes("idle","neutral","Let’s see where you stand","Move the slider, enter your revenue and pick a credit range. We’ll update as you go."); return; }
+    if(n===3){
+      if(t==="2plus" && r>=2 && c>=2){
+        setRes("strong","ok","You look like a strong fit","Your time in business, revenue and credit line up well with what we typically look for. Start your application whenever you’re ready."); return; }
+      var why = null;
+      if(t!=="2plus" && r>=3 && c>=2) why = "Newer businesses with strong revenue and solid credit are often a good fit. Your revenue carries a lot of weight here.";
+      else if(t==="2plus" && r>=2 && c===1) why = "Steady revenue and years in business count for a lot, even when your credit score is a little below our typical range.";
+      else if(t==="1to2" && r>=2 && c>=3) why = "Strong credit and healthy revenue can offset a shorter time in business.";
+      if(why){ setRes("likely","ok","You may still be a great fit", why + " A specialist will review your application individually."); return; }
+      setRes("review","soft","Let’s take a closer look","A few details fall outside our typical range, but you can still apply. A specialist will walk through what may be possible and what to work toward."); return;
+    }
+    /* partial: encourage as soon as there is something to say */
+    var title="Keep going", body="", tone="neutral";
+    if(hasT && !hasR && !hasC){
+      if(t==="2plus"){ body="Two or more years in business is a strong start."; tone="ok"; }
+      else if(t==="1to2"){ body="Under 2 years can still work. Your next answers matter."; }
+      else { body="Newer businesses can still apply. Revenue tells us a lot."; }
+    } else if(hasT && hasR && !hasC){
+      if(t!=="2plus" && r>=3){ body="Strong revenue carries real weight for a newer business."; tone="ok"; }
+      else if(t==="2plus" && r>=2){ body="Steady revenue and time in business is a solid combination."; tone="ok"; }
+      else if(r>=2){ body="Healthy revenue helps balance a shorter time in business."; tone="ok"; }
+      else { body="Revenue is under our typical range, so your credit range matters."; tone="soft"; }
+    } else if(!hasT && hasR && !hasC){
+      if(r>=2){ body="Your revenue is in a strong range. Tell us how long you’ve been in business."; tone="ok"; }
+      else { body="Revenue is under our typical range. Your other answers matter."; tone="soft"; }
+    } else if(!hasT && !hasR && hasC){
+      if(c>=2){ body="Your credit score is in our typical range."; tone="ok"; }
+      else { body="Credit is under our typical range. Your other answers matter."; tone="soft"; }
+    } else if(hasT && !hasR && hasC){
+      body = c>=2 ? "Good credit helps. Add your revenue to complete the picture." : "Add your revenue to complete the picture.";
+      tone = c>=2 ? "ok" : "neutral";
+    } else if(!hasT && hasR && hasC){
+      body="One more: move the slider to show how long you’ve been in business.";
+    }
+    setRes("idle", tone, title, body);
+  }
+  function setT(i, touched){
+    tRange.value = i; tWrap.style.setProperty("--p", String(i/4));
+    if(touched){ fit.t = i; tVal.textContent = TIME[i].label; tVal.classList.remove("idle"); tRange.setAttribute("aria-valuetext", TIME[i].label); }
+  }
+  tRange.addEventListener("input", function(){ setT(Number(tRange.value), true); updateFit(); });
+  tRange.addEventListener("change", function(){ setT(Number(tRange.value), true); updateFit(); });
+  revIn.addEventListener("input", function(){
+    revIn.value = fmt(digits(revIn.value));
+    var n = Number(digits(revIn.value));
+    fit.rev = n>0 ? n : null;
+    if(n>0){ rVal.textContent = "$" + revIn.value; rVal.classList.remove("idle"); }
+    else { rVal.textContent = "Enter an amount"; rVal.classList.add("idle"); }
+    updateFit();
+  });
+  cChips.forEach(function(b){
+    b.addEventListener("click", function(){
+      var on = b.getAttribute("aria-pressed")==="true";
+      cChips.forEach(function(x){ x.setAttribute("aria-pressed","false"); });
+      if(on){ fit.c = null; } else { b.setAttribute("aria-pressed","true"); fit.c = Number(b.dataset.v); }
+      updateFit();
+    });
+  });
+  setT(0,false); updateFit();
+
+  /* ---------- review carousel ---------- */
+  var REVIEWS = [
+    {t:"Very quick and painless procedure to obtain working capital loan for the third time! Efficient and friendly!", n:"Karen C.", s:"Kapitus customer", alt:true},
+    {t:"Nick and the Kapitus team got me funded quickly and had a great streamlined process.", n:"Matthew", s:"Google review"},
+    {t:"As good as it gets! You truly feel like you have a teammate that cares about your business.", n:"Kyle Flowers", s:"Google review"},
+    {t:"Kind, supportive and easy to work with.", n:"Dawn Lepore", s:"Google review", alt:true},
+    {t:"Great Company, Great People!", n:"Sean Lowery", s:"Google review"},
+    {t:"Excellent service! great platform and customer services 5 stars", n:"Joan Efres Nazario", s:"Google review"}
+  ];
+  var track=$("#carTrack"), dotsEl=$("#dots"), pauseBtn=$("#carPause");
+  REVIEWS.forEach(function(r,i){
+    var c = el("figure","rcard" + (r.alt?" alt":""));
+    c.setAttribute("role","group"); c.setAttribute("aria-label",(i+1)+" of "+REVIEWS.length);
+    c.style.margin = "0";
+    var st = el("div","stars","\u2605\u2605\u2605\u2605\u2605"); st.setAttribute("aria-label","5 stars");
+    var q = el("blockquote",null,r.t);
+    var w = el("div"); w.appendChild(el("div","who",r.n)); w.appendChild(el("div","src",r.s));
+    c.appendChild(st); c.appendChild(q); c.appendChild(w); track.appendChild(c);
+    var d = el("button"); d.type="button"; d.setAttribute("aria-label","Go to review "+(i+1));
+    d.addEventListener("click", function(){ go(i); userPause(); });
+    dotsEl.appendChild(d);
+  });
+  function gapPx(){ var cs = getComputedStyle(track); return parseFloat(cs.columnGap || cs.gap) || 20; }
+  function stepPx(){ return track.children[0].getBoundingClientRect().width + gapPx(); }
+  function maxScroll(){ return track.scrollWidth - track.clientWidth; }
+  function curIdx(){ return Math.min(REVIEWS.length-1, Math.round(track.scrollLeft / stepPx())); }
+  function go(i){
+    i = Math.max(0, Math.min(REVIEWS.length-1, i));
+    track.scrollTo({left: Math.min(i*stepPx(), maxScroll()), behavior: reduce ? "auto" : "smooth"});
+  }
+  function next(){ if(track.scrollLeft >= maxScroll()-4){ go(0); } else { go(curIdx()+1); } }
+  function prev(){ if(track.scrollLeft <= 4){ track.scrollTo({left:maxScroll(), behavior: reduce?"auto":"smooth"}); } else { go(curIdx()-1); } }
+  function paintDots(){
+    var i = (track.scrollLeft >= maxScroll()-4) ? REVIEWS.length-1 : curIdx();
+    $$("button", dotsEl).forEach(function(d,k){ d.setAttribute("aria-current", String(k===i)); });
+  }
+  var raf=0; track.addEventListener("scroll", function(){ cancelAnimationFrame(raf); raf = requestAnimationFrame(paintDots); }, {passive:true});
+  $("#carNext").addEventListener("click", function(){ next(); userPause(); });
+  $("#carPrev").addEventListener("click", function(){ prev(); userPause(); });
+  track.addEventListener("keydown", function(e){ if(e.key==="ArrowRight"){ next(); e.preventDefault(); } if(e.key==="ArrowLeft"){ prev(); e.preventDefault(); } });
+
+  /* autoplay: runs only while visible, pauses on hover, focus, touch and via the pause button */
+  var timer=null, hover=false, focused=false, held=false, userPaused=false, visible=false, holdT=null;
+  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  function sync(){
+    stop();
+    if(reduce || userPaused || hover || focused || held || !visible || document.hidden) return;
+    timer = setInterval(next, 3800);
+  }
+  function userPause(){ /* arrows and dots pause briefly, then resume */
+    held = true; sync(); clearTimeout(holdT); holdT = setTimeout(function(){ held=false; sync(); }, 8000);
+  }
+  var carEl = $("#car");
+  carEl.addEventListener("mouseenter", function(){ hover=true; sync(); });
+  carEl.addEventListener("mouseleave", function(){ hover=false; sync(); });
+  carEl.addEventListener("focusin", function(){ focused=true; sync(); });
+  carEl.addEventListener("focusout", function(){ focused=false; sync(); });
+  track.addEventListener("touchstart", function(){ held=true; sync(); clearTimeout(holdT); }, {passive:true});
+  track.addEventListener("touchend", function(){ clearTimeout(holdT); holdT = setTimeout(function(){ held=false; sync(); }, 6000); }, {passive:true});
+  document.addEventListener("visibilitychange", sync);
+  pauseBtn.addEventListener("click", function(){
+    userPaused = !userPaused;
+    pauseBtn.setAttribute("aria-pressed", String(userPaused));
+    pauseBtn.setAttribute("aria-label", userPaused ? "Resume automatic scrolling" : "Pause automatic scrolling");
+    $("#pauseIco").innerHTML = userPaused ? '<path d="M7 5l12 7-12 7z"/>' : '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>';
+    sync();
+  });
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(en){ visible = en[0].isIntersecting; sync(); },{threshold:0.35}).observe(carEl);
+  } else { visible = true; sync(); }
+  if(reduce){ pauseBtn.hidden = true; }
+  paintDots();
+
+  /* ---------- ask box (grounded in the knowledge base above) ---------- */
+  var answerEl = $("#answer"), input = $("#askInput");
+  function actions(parent){
+    var row = el("div","a-actions");
+    var call = el("a","btn btn-ghost btn-sm","Call a specialist: " + PHONE_SALES);
+    call.href = "tel:+16466307618";
+    var go2 = el("a","btn btn-primary btn-sm","Start my application");
+    go2.href = "#apply"; go2.addEventListener("click", toAmount);
+    row.appendChild(go2); row.appendChild(call); parent.appendChild(row);
+  }
+  function meta(parent, src, pending){
+    var m = el("div","a-meta"); m.appendChild(el("span",null,"Source: " + src));
+    if(pending){ m.appendChild(el("span","pending","Pending Kapitus confirmation")); }
+    parent.appendChild(m);
+  }
+  function renderAnswer(q){
+    var cardEl = el("div","a-card");
+    cardEl.appendChild(el("p","a-q","You asked: " + q));
+    var body = el("div","a-body");
+    var prof = parseProfile(q);
+    var hasProfile = prof.years!=null || prof.revenue!=null || prof.credit!=null;
+    var ranked = retrieve(q);
+    if(hasProfile){
+      var pa = profileAnswer(prof);
+      body.appendChild(el("p",null,"Here’s how what you shared compares with our typical qualifications:"));
+      var ul = el("ul","cmp");
+      pa.rows.forEach(function(r){
+        var li = el("li"); li.appendChild(el("span",null, r.label + ": " + r.val + " (typical " + r.typical + ")"));
+        li.appendChild(el("span","tag " + (r.ok?"meets":"below"), r.ok ? "Meets typical" : "Below typical"));
+        ul.appendChild(li);
+      });
+      body.appendChild(ul);
+      pa.paras.forEach(function(t){ body.appendChild(el("p",null,t)); });
+      cardEl.appendChild(body);
+      actions(cardEl); meta(cardEl, pa.src, true);
+    } else if(ranked[0].s >= 3){
+      ranked[0].e.a.forEach(function(t){ body.appendChild(el("p",null,t)); });
+      cardEl.appendChild(body);
+      if(["person","qualify","credit","time"].indexOf(ranked[0].e.id)>-1) actions(cardEl);
+      meta(cardEl, ranked[0].e.src, ranked[0].e.status==="pending");
+    } else {
+      body.appendChild(el("p",null,"I don’t have an answer to that in the Kapitus information I can use, and I won’t guess."));
+      body.appendChild(el("p",null,"A financing specialist can help at " + PHONE_SALES + ", or try rephrasing your question."));
+      cardEl.appendChild(body); actions(cardEl);
+    }
+    var rel = ranked.filter(function(x,i){ return x.s>=2 && (hasProfile || i>0); }).slice(0,2);
+    if(!hasProfile && ranked[0].s<3) rel = [];
+    if(rel.length){
+      var rb = el("div","related"); rb.appendChild(el("b",null,"You might also ask"));
+      rel.forEach(function(x){
+        var b = el("button","linkbtn",x.e.q); b.type="button";
+        b.addEventListener("click", function(){ input.value = x.e.q; submit(x.e.q); });
+        rb.appendChild(b);
+      });
+      cardEl.appendChild(rb);
+    }
+    answerEl.innerHTML = ""; answerEl.appendChild(cardEl);
+  }
+  function submit(q){
+    q = (q||"").trim();
+    if(!q){ input.focus(); return; }
+    renderAnswer(q);
+    answerEl.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"nearest"});
+  }
+  $("#askForm").addEventListener("submit", function(e){ e.preventDefault(); submit(input.value); });
+  input.addEventListener("keydown", function(e){ if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); submit(input.value); }});
+
+  /* ---------- FAQ widget: topic tabs + single-open accordion ---------- */
+  var tabsEl = $("#tabs"), panel = $("#panel"), curCat = 0;
+  var PLUS = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>';
+  function renderPanel(){
+    panel.innerHTML = "";
+    panel.setAttribute("aria-labelledby", "tab" + curCat);
+    var items = KB.filter(function(e){ return e.cat === CATS[curCat]; });
+    items.forEach(function(e,i){
+      var acc = el("div","acc");
+      var btn = el("button","acc-q"); btn.type="button"; btn.id = "q_"+e.id;
+      btn.setAttribute("aria-expanded", String(i===0)); btn.setAttribute("aria-controls","a_"+e.id);
+      btn.appendChild(el("span",null,e.q)); btn.insertAdjacentHTML("beforeend", PLUS);
+      var ans = el("div","acc-a" + (i===0?" open":"")); ans.id = "a_"+e.id; ans.setAttribute("role","region"); ans.setAttribute("aria-labelledby","q_"+e.id);
+      var inner = el("div");
+      e.a.forEach(function(t){ inner.appendChild(el("p",null,t)); });
+      var m = el("div","meta"); m.appendChild(el("span",null,"Source: "+e.src));
+      if(e.status==="pending") m.appendChild(el("span","pending","Pending Kapitus confirmation"));
+      inner.appendChild(m); ans.appendChild(inner);
+      btn.addEventListener("click", function(){
+        var open = btn.getAttribute("aria-expanded")==="true";
+        $$(".acc-q", panel).forEach(function(b){ b.setAttribute("aria-expanded","false"); });
+        $$(".acc-a", panel).forEach(function(a){ a.classList.remove("open"); });
+        if(!open){ btn.setAttribute("aria-expanded","true"); ans.classList.add("open"); }
+      });
+      acc.appendChild(btn); acc.appendChild(ans); panel.appendChild(acc);
+    });
+  }
+  function selectTab(i, focus){
+    curCat = i;
+    $$(".tab", tabsEl).forEach(function(t,k){ t.setAttribute("aria-selected", String(k===i)); t.tabIndex = (k===i) ? 0 : -1; });
+    renderPanel();
+    if(focus){ $$(".tab", tabsEl)[i].focus(); }
+  }
+  CATS.forEach(function(c,i){
+    var t = el("button","tab",c); t.type="button"; t.setAttribute("role","tab"); t.id = "tab"+i;
+    t.addEventListener("click", function(){ selectTab(i,false); });
+    t.addEventListener("keydown", function(e){
+      var k = e.key, n = CATS.length;
+      if(k==="ArrowRight"||k==="ArrowDown"){ selectTab((i+1)%n,true); e.preventDefault(); }
+      if(k==="ArrowLeft"||k==="ArrowUp"){ selectTab((i+n-1)%n,true); e.preventDefault(); }
+    });
+    tabsEl.appendChild(t);
+  });
+  selectTab(0,false);
+
+  /* ---------- sticky mobile CTA: only when the hero card and closing band are off screen ---------- */
+  var sticky = $("#sticky"), hid = {card:false, band:false};
+  function upd(){ sticky.classList.toggle("show", !hid.card && !hid.band && window.scrollY > 200); }
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(en){ hid.card = en[0].isIntersecting; upd(); },{threshold:0.05}).observe($("#card"));
+    new IntersectionObserver(function(en){ hid.band = en[0].isIntersecting; upd(); },{threshold:0.01}).observe($("#fFoot"));
+  }
+  window.addEventListener("scroll", upd, {passive:true});
+})();
+</script>
+</body>
+</html>
